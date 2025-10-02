@@ -1,0 +1,141 @@
+
+h2 { font-size: clamp(14px, 2.2vw, 18px); }
+h3 { font-size: clamp(10px, 1.9vw, 16px); }
+
+#menu li::marker { content: none; }
+#menu li::before { content: none !important; }
+
+#menu a:link, #menu a:visited {
+    color: #fff;
+}
+#menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                 /* 요소 사이 간격 */
+  padding: 12px 16px;
+}
+
+/* 버튼 아래 약간 여백 주고 싶다면 */
+#new-approval { margin-bottom: 8px; }
+
+/* details/summary 스타일(마커 제거 포함) */
+#menu details { margin: 4px 0; }
+#menu summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 4px 0;
+}
+#menu summary::-webkit-details-marker { display: none; }
+#menu summary::marker { content: none; }
+#menu summary::after { content: '▸'; margin-left: .4rem; color:#666; }
+#menu details[open] > summary::after { content: '▾'; }
+
+/* 목록 불릿 제거 + 들여쓰기 */
+#menu ul { list-style: none; padding-left: 0; margin: 0; }
+#menu .menu-sub > ul { padding-left: 1rem; }
+   
+/* 기본 마커 숨기기 (중복 방지) */
+#menu summary::-webkit-details-marker { display: none; }
+#menu summary::marker { content: none; }
+
+/* summary 줄 정렬 + 오른쪽에 큰 화살표 배치 */
+#menu summary{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 텍스트 ─────▶ 화살표 */
+  padding: 4px 0;
+}
+
+/* 화살표 크기/색/간격 */
+#menu summary::after{
+  content: '▸';            /* 닫힘 상태 */
+  font-size: 30px;         /* ← 여기 숫자 키우면 더 큼 */
+  line-height: 1;
+  margin-left: 8px;
+  color: #fff;             /* 파란 배경이면 흰색 추천 */
+}
+
+/* 열린 상태 화살표 */
+#menu details[open] > summary::after{
+  content: '▾';
+}
+
+
+/* 보고서 페이지 간격/정렬 */
+#page-report .table{ margin-bottom:.5rem !important; }
+#page-report thead th{ white-space:nowrap; }
+#page-report td, #page-report th{ line-height:1.25; }
+
+/* 컨트롤영역 가운데 정렬 */
+.report-controls{
+  display:flex;
+  flex-direction:column;
+  align-items:center;   /* 중앙 */
+  gap:.5rem;
+}
+#page-report .pagination{ margin:0; }
+.search-wrap{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+}
+
+  #board-table td .cmt { color:#ff5a00; font-weight:600; }
+
+  /* 일정 폼 전용 스타일 */
+  .chip {
+    display:inline-flex; align-items:center; gap:.35rem;
+    padding:.25rem .5rem; border:1px solid var(--frame-color);
+    border-radius:999px; background:#fff; font-size:.9rem;
+  }
+  .chip button { border:0; background:transparent; cursor:pointer; }
+  .form-section-title{ font-weight:700; margin-bottom:.5rem; }
+  .card + .card { margin-top:1rem; }
+  .preview-item{ display:flex; gap:.5rem; }
+  .preview-item .label{ min-width:72px; color:#666; }
+  /* 사이드에 겹쳐 뜨는 보드용 드로어 */
+  #menu { position: fixed; overflow: hidden; } /* 이미 있음: 중복 OK */
+  #menu-board-drawer{
+    position:absolute; inset:0;               /* top/left/right/bottom:0 */
+    background: var(--sub-color-a); color:#fff;
+    padding:12px 16px; overflow:auto;
+    transform: translateX(-100%);             /* 숨김 */
+    transition: transform .25s ease;
+  }
+  #menu-board-drawer.show{ transform: translateX(0); }
+  #menu-board-drawer h2{ margin:0 0 .75rem 0; font-size: clamp(14px,2.2vw,18px); }
+  #menu-board-drawer a{ color:#fff; text-decoration:none; }
+  #menu-board-drawer .btn-back{
+    border:1px solid rgba(255,255,255,.6); color:#fff; background:transparent;
+  }
+  #menu-board-drawer ul{ list-style:none; padding-left:0; margin:0; }
+
+  /* nav가 들어있는 그 row만 구터 0 */
+  .row:has(#nav){ --bs-gutter-x: 0; }
+
+  /* col-3 폭을 nav(100) + menu(200) = 300px로 고정 */
+  .row:has(#nav) > .col-3 { 
+  flex: 0 0 calc(var(--nav-width) + var(--menu-width)); 
+  max-width: calc(var(--nav-width) + var(--menu-width));
+}
+
+  /* 헤더 아래 여백: #section은 margin-top 제거, padding-top만 사용 */
+  #section{ 
+    margin-top: 0 !important; 
+    padding-top: calc(var(--header-height) + 4px) !important; 
+  }
+
+  /* 게시판 화면 내부 간격 타이트하게 */
+  #page-board .py-3{ padding-top:.5rem !important; padding-bottom:.5rem !important; }
+  #page-board h2.h5{ margin-bottom:.25rem !important; }
+  #page-board .text-muted{ margin-bottom:.5rem !important; }
+  #page-board .btn-group{ margin-bottom:.5rem !important; }
+  #page-board .table{ margin-bottom:.5rem !important; }
+  #page-board .pagination{ margin:0 !important; }
+
+  /* 표 셀 패딩/라인높이 더 축소 */
+  #board-table.table>:not(caption)>*>*{ padding:.35rem .5rem; }
+  #board-table td, #board-table th{ line-height:1.2; }
+
+  /* (선택) 컬럼 가로 여백 살짝 축소 */
+  :root{ --bs-gutter-x:.75rem; }

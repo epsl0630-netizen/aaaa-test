@@ -1,0 +1,226 @@
+    :root {
+      --main-color: #1e90ff; /* 메인색을 변수로 정의 */
+      --sub-color-1: #0B84E1;;
+      --sub-color-2: #d8e5fd;
+
+      --footer-color: white;
+
+      --frame-color: #dadce0;
+      
+      --header-height: 100px;
+      --nav-width: 100px;
+      --menu-width: 200px;
+      --footer-height: 100px;
+
+      --gadget-basic-width: 300px;
+    }
+
+    body,html {
+      margin: 0;
+      height: 100%;
+    }
+    #wrap {
+      width: 100%;
+      height: 100%;
+      overflow: hidden
+    }
+    #header {
+      width: 100%;
+      height: var(--header-height);
+      background-color: white;
+      z-index: 5;
+      position: fixed;
+      top: 0;
+      padding: 20px;
+
+      border: 1px solid var(--frame-color);
+    }
+    #nav, #menu , #section {
+      margin-top: var(--header-height);
+    }
+
+    /* 헤더 로고 */
+    .m-logo {
+      width: 50px;
+      height: 50px;
+      background-size: 50px;
+      background-image: url(../img/logo.png);
+      background-repeat: no-repeat;
+      object-fit: contain;
+      float: left;
+    }
+    
+    #header-list {
+      display: inline-block;
+
+      float: right;
+      text-align: right;
+      width: 300px;
+      padding-right: 20px;
+    }
+    #header-list > * {
+    display: inline-block;
+    }
+
+    /* search */
+    #search-container {
+      margin-right: 10px;
+      position: relative;
+     }
+
+    #search {
+      width: 200px;
+    }
+    
+    #search-btn {
+      position: absolute;
+      right: 1%;
+      cursor : pointer;
+      border: 0;
+      background-color: transparent;
+    }
+    /* 프로필 이미지 */
+    .profile-img-sm {
+      width : 30px;
+      height : 30px;
+      border: 1px solid var(--frame-color);
+      border-radius: 50%;
+    }
+    /* nav */
+    #nav {
+      width: var(--nav-width);
+
+      justify-content: center;
+      align-items : center;
+    }
+
+    #nav ul, #menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #nav ul {
+      padding: 10px;
+      text-align: center;
+    }
+
+    #nav li {
+      display: inline-block;
+    }
+    #nav a {
+      color: black;
+      text-decoration: none;
+    }
+    .nav-icon { 
+      width: 40px;
+      height: 40px;
+
+      border-radius: 20%;
+      /* 아이콘 가운데 정렬 start */
+      display : flex;
+      justify-content: center;
+      align-items : center;
+      /* 아이콘 가운데 정렬 end */
+    }
+    /* icon selected */
+    .icon-selected {
+      background-color: var(--main-color);
+    }
+    .icon-selected > .nav-icon > svg {
+      fill: #fff;
+    }
+    .nav-btn {
+      margin: 3px 0px;
+
+      width: 64px;
+      height: 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 30%;
+
+      font-size: smaller;
+    }
+    .nav-btn:hover{
+      background: gainsboro;
+    }
+
+    #nav-icon > svg {
+      fill: #1f1f1f;
+    }
+    #nav-menu-btn {
+      display: none;
+    }
+    /* menu */
+    #menu {
+      margin-left: var(--nav-width);
+      width: var(--menu-width);
+
+      background-color: var(--sub-color-1);
+      color: white;
+    }
+
+    .menu-title {
+      display: block;
+      padding: 20px 0px;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    #menu > div {
+      width: var(--menu-width);
+      margin: 0px 0px 20px 20px;
+    }
+
+    /* nav menu */
+    #nav, #menu {
+      vertical-align: top;
+      float: left;
+      position: fixed;
+      height: 100%;
+    }
+    /* section */
+    #section {
+      width: 100%;
+      padding-left: calc(var(--nav-width) + var(--menu-width) );
+      float: left;
+    }
+    #section > table {
+      width: 1280px;
+      table-layout : fixed;
+      margin-top : 20px;
+      margin: 0 auto;
+    }
+    /* footer */
+    #footer {
+      position: relative;
+      bottom: 0px;
+
+      height: var(--footer-height);
+
+      border-top: 1px solid var(--frame-color);
+      background-color: var(--footer-color);
+    }
+    /* 스크린이 625px 이상 */
+    @media screen and (min-width:625px) {
+      
+    }
+    /* 스크린이 625px 이하 */
+    @media screen and (max-width:900px) {
+      #search-container {
+        display: none;
+      }
+      .ml-logo {
+        width: 80px;
+        height: 80px;
+        background-size: 80px;
+      }
+    }
+    @media screen and (max-width:625px) {
+      #header-list {
+        display: none;
+      }
+    }
+    

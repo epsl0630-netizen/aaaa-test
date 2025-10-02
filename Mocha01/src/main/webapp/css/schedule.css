@@ -1,0 +1,177 @@
+/* schedule css
+  2025-10-01
+*/
+/* schedule write start */
+
+/* 날짜·시간 인풋 폭 */
+.input-date { width: 220px; }   /* 필요시 200~260px로 조절 */
+.input-time { width: 140px; }   /* 필요시 100~140px로 조절 */     
+
+/* 카드/폼 정돈 */
+.board-view .label {
+  width: 100px;
+  font-weight: 600;
+  color: #555;
+}
+.board-view .value {
+  flex: 1;
+}
+.board-view .kv {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.board-view .content-box {
+  border: 1px solid var(--frame-color);
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 140px;
+}
+.board-actions .btn + .btn { margin-left: 8px; }
+
+.board-actions {
+  display: flex;
+  justify-content: center;  /* 버튼들을 가로 중앙에 정렬 */
+  margin-top: 16px;         /* 위쪽 여백 조금 */
+}
+
+.comment-item {
+  border: 1px solid var(--frame-color);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+/* 한 줄 레이아웃 */
+.board-view .kv{
+  display:flex; gap:12px; align-items:center; margin-bottom:10px;
+}
+.board-view .label{ width:100px; font-weight:600; color:#555; }
+.board-view .value{ flex:1; min-width:0; }           /* 줄바꿈 방지 보조 */
+
+.board-view .value-inline{
+  display:flex; align-items:center; gap:8px;         /* 가로로 나란히 */
+  flex-wrap:nowrap;                                  /* 한 줄 고정 */
+}
+
+.input-date{ width:220px; }
+.input-time{ width:140px; }
+
+/* schedule write end */
+/* schedule modift start */
+
+/* 날짜·시간 인풋 폭 */
+.input-date { width: 220px; }   /* 필요시 200~260px로 조절 */
+.input-time { width: 140px; }   /* 필요시 100~140px로 조절 */     
+
+/* 카드/폼 정돈 */
+.board-view .label {
+  width: 100px;
+  font-weight: 600;
+  color: #555;
+}
+.board-view .value {
+  flex: 1;
+}
+.board-view .kv {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.board-view .content-box {
+  border: 1px solid var(--frame-color);
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 140px;
+}
+.board-actions .btn + .btn { margin-left: 8px; }
+
+.board-actions {
+  display: flex;
+  justify-content: center;  /* 버튼들을 가로 중앙에 정렬 */
+  margin-top: 16px;         /* 위쪽 여백 조금 */
+}
+
+.comment-item {
+  border: 1px solid var(--frame-color);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+/* 한 줄 레이아웃 */
+.board-view .kv{
+  display:flex; gap:12px; align-items:center; margin-bottom:10px;
+}
+.board-view .label{ width:100px; font-weight:600; color:#555; }
+.board-view .value{ flex:1; min-width:0; }           /* 줄바꿈 방지 보조 */
+
+.board-view .value-inline{
+  display:flex; align-items:center; gap:8px;         /* 가로로 나란히 */
+  flex-wrap:nowrap;                                  /* 한 줄 고정 */
+}
+
+.input-date{ width:220px; }
+.input-time{ width:140px; }
+
+/* schedule modift end */
+/* schedule view start */
+
+/* 날짜·시간 인풋 폭 */
+.input-date { width: 220px; }   /* 필요시 200~260px로 조절 */
+.input-time { width: 140px; }   /* 필요시 100~140px로 조절 */     
+
+/* 카드/폼 정돈 */
+.board-view .label {
+  width: 100px;
+  font-weight: 600;
+  color: #555;
+}
+.board-view .value {
+  flex: 1;
+}
+.board-view .kv {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.board-view .content-box {
+  border: 1px solid var(--frame-color);
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 140px;
+}
+.board-actions .btn + .btn { margin-left: 8px; }
+
+.board-actions {
+  display: flex;
+  justify-content: center;  /* 버튼들을 가로 중앙에 정렬 */
+  margin-top: 16px;         /* 위쪽 여백 조금 */
+}
+
+.comment-item {
+  border: 1px solid var(--frame-color);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+/* 한 줄 레이아웃 */
+.board-view .kv{
+  display:flex; gap:12px; align-items:center; margin-bottom:10px;
+}
+.board-view .label{ width:100px; font-weight:600; color:#555; }
+.board-view .value{ flex:1; min-width:0; }           /* 줄바꿈 방지 보조 */
+
+.board-view .value-inline{
+  display:flex; align-items:center; gap:8px;         /* 가로로 나란히 */
+  flex-wrap:nowrap;                                  /* 한 줄 고정 */
+}
+
+.input-date{ width:220px; }
+.input-time{ width:140px; }
+
+/* schedule view end */
